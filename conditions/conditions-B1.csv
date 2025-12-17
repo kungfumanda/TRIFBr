@@ -1,0 +1,3 @@
+Bloco,Condicao,Lamina_ID,Target_Correto_Posicao,Target_Video,Image_1,Image_2,Image_3,Image_4
+BT1,CONTROLE,L1,1,../stimuli/video_teste.gif,../stimuli/imagem_teste.jpg,../stimuli/imagem_teste.jpg,../stimuli/imagem_teste.jpg,../stimuli/imagem_teste.jpg
+BT1,CONTROLE,L2,3,../stimuli/video_teste.gif,../stimuli/imagem_teste.jpg,../stimuli/imagem_teste.jpg,../stimuli/imagem_teste.jpg,../stimuli/imagem_teste.jpg
