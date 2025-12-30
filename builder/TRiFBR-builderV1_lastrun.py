@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2025.1.1),
-    on dezembro 17, 2025, at 01:35
+    on dezembro 30, 2025, at 10:29
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -47,6 +47,8 @@ runAtExit = []
 # information about this experiment
 expInfo = {
     'Participante ID': '',
+    'Idade': '',
+    'Gênero': '',
     'Experimento': 'TESTE',
     'date|hid': data.getDateStr(),
     'expName|hid': expName,
@@ -199,7 +201,7 @@ def setupWindow(expInfo=None, win=None):
         win = visual.Window(
             size=_winSize, fullscr=_fullScr, screen=0,
             winType='pyglet', allowGUI=False, allowStencil=False,
-            monitor='testMonitor', color=[0,0,0], colorSpace='rgb',
+            monitor='testMonitor', color=[1.0000, 1.0000, 1.0000], colorSpace='rgb',
             backgroundImage='', backgroundFit='none',
             blendMode='avg', useFBO=True,
             units='deg',
@@ -207,7 +209,7 @@ def setupWindow(expInfo=None, win=None):
         )
     else:
         # if we have a window, just set the attributes which are safe to set
-        win.color = [0,0,0]
+        win.color = [1.0000, 1.0000, 1.0000]
         win.colorSpace = 'rgb'
         win.backgroundImage = ''
         win.backgroundFit = 'none'
@@ -402,21 +404,21 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         text='Bem-vindo(a) ao Teste de Reconhecimento\nde Identidade de Faces.',
         font='Arial',
         units='norm', pos=(0, 0.7), draggable=False, height=0.09, wrapWidth=1.8, ori=0.0, 
-        color='white', colorSpace='rgb', opacity=None, 
+        color='black', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=0.0);
     text_body = visual.TextStim(win=win, name='text_body',
         text='TAREFA: \nUm vídeo com uma face aparecerá no centro. Identifique qual das 4 opções abaixo corresponde à mesma face.\n\nCOMO RESPONDER:\nUse o MOUSE para clicar na face OU Use o TECLADO (1, 2, 3, 4)\n\nDETALHES:\nO teste começará com uma breve etapa de familiarização.\nO teste é dividido em blocos. Haverá pausas automáticas entre eles.',
         font='Arial',
         units='norm', pos=(0, 0), draggable=False, height=0.07, wrapWidth=1.6, ori=0.0, 
-        color='white', colorSpace='rgb', opacity=None, 
+        color='black', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-1.0);
     text_advance = visual.TextStim(win=win, name='text_advance',
         text='Vamos fazer um teste? \nPressione a BARRA DE ESPAÇO ou o BOTÃO ESQUERDO DO MOUSE para continuar.',
         font='Arial',
         units='norm', pos=(0, -0.7), draggable=False, height=0.06, wrapWidth=1.5, ori=0.0, 
-        color='white', colorSpace='rgb', opacity=None, 
+        color='black', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-2.0);
     key_response_initiate = keyboard.Keyboard(deviceName='key_response_initiate')
@@ -429,12 +431,12 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         text='Este é um exemplo deste teste',
         font='Arial',
         units='height', pos=(0, 0.42), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
-        color='white', colorSpace='rgb', opacity=None, 
+        color='black', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=0.0);
     instruction_video = visual.MovieStim(
         win, name='instruction_video',
-        filename='../stimuli/video_teste.gif', movieLib='ffpyplayer',
+        filename='../stimuli/video_teste_2.gif', movieLib='ffpyplayer',
         loop=True, volume=1.0, noAudio=False,
         pos=(0, 0.20), size=[0.4,0.3], units='height',
         ori=0.0, anchor='center',opacity=None, contrast=1.0,
@@ -444,21 +446,21 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         text='Clique em algum das opções ou digite o seu número para continuar.',
         font='Arial',
         units='height', pos=(0, -0.01), draggable=False, height=0.03, wrapWidth=None, ori=0.0, 
-        color='white', colorSpace='rgb', opacity=None, 
+        color='black', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-2.0);
     text_instruction_1 = visual.TextStim(win=win, name='text_instruction_1',
         text='1',
         font='Arial',
         units='height', pos=(-0.4, -0.08), draggable=False, height=0.04, wrapWidth=None, ori=0.0, 
-        color='white', colorSpace='rgb', opacity=None, 
+        color='black', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-3.0);
     image_instruction_1 = visual.ImageStim(
         win=win,
         name='image_instruction_1', units='height', 
-        image='../stimuli/imagem_teste.jpg', mask=None, anchor='center',
-        ori=0.0, pos=(-0.40, -0.25), draggable=False, size=(0.20, 0.25),
+        image='../stimuli/imagem_teste_1.jpg', mask=None, anchor='center',
+        ori=0.0, pos=(-0.40, -0.25), draggable=False, size=(0.17, 0.25),
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-4.0)
@@ -466,14 +468,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         text='2',
         font='Arial',
         units='height', pos=(-0.13,-0.08), draggable=False, height=0.04, wrapWidth=None, ori=0.0, 
-        color='white', colorSpace='rgb', opacity=None, 
+        color='black', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-5.0);
     image_instruction_2 = visual.ImageStim(
         win=win,
         name='image_instruction_2', units='height', 
-        image='../stimuli/imagem_teste.jpg', mask=None, anchor='center',
-        ori=0.0, pos=(-0.13, -0.25), draggable=False, size=(0.20, 0.25),
+        image='../stimuli/imagem_teste_2.jpg', mask=None, anchor='center',
+        ori=0.0, pos=(-0.13, -0.25), draggable=False, size=(0.17, 0.25),
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-6.0)
@@ -481,14 +483,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         text='3',
         font='Arial',
         units='height', pos=(0.13, -0.08), draggable=False, height=0.04, wrapWidth=None, ori=0.0, 
-        color='white', colorSpace='rgb', opacity=None, 
+        color='black', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-7.0);
     image_instruction_3 = visual.ImageStim(
         win=win,
         name='image_instruction_3', units='height', 
-        image='../stimuli/imagem_teste.jpg', mask=None, anchor='center',
-        ori=0.0, pos=(0.13, -0.25), draggable=False, size=(0.20, 0.25),
+        image='../stimuli/imagem_teste_3.jpg', mask=None, anchor='center',
+        ori=0.0, pos=(0.13, -0.25), draggable=False, size=(0.17, 0.25),
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-8.0)
@@ -496,14 +498,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         text='4',
         font='Arial',
         units='height', pos=(0.40, -0.08), draggable=False, height=0.04, wrapWidth=None, ori=0.0, 
-        color='white', colorSpace='rgb', opacity=None, 
+        color='black', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-9.0);
     image_instruction_4 = visual.ImageStim(
         win=win,
         name='image_instruction_4', units='height', 
-        image='../stimuli/imagem_teste.jpg', mask=None, anchor='center',
-        ori=0.0, pos=(0.40, -0.25), draggable=False, size=(0.20, 0.25),
+        image='../stimuli/imagem_teste_4.jpg', mask=None, anchor='center',
+        ori=0.0, pos=(0.40, -0.25), draggable=False, size=(0.17, 0.25),
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-10.0)
@@ -517,14 +519,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         text='BLOCO 1',
         font='Arial',
         pos=(0, 1), draggable=False, height=1.0, wrapWidth=None, ori=0.0, 
-        color='white', colorSpace='rgb', opacity=None, 
+        color='black', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=0.0);
     text_response = visual.TextStim(win=win, name='text_response',
         text='Pressione a BARRA DE ESPAÇO ou o BOTÃO ESQUERDO DO MOUSE para continuar.',
         font='Arial',
         pos=(0, -2), draggable=False, height=0.5, wrapWidth=None, ori=0.0, 
-        color='white', colorSpace='rgb', opacity=None, 
+        color='black', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-1.0);
     key_resp = keyboard.Keyboard(deviceName='key_resp')
@@ -545,14 +547,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         text='1',
         font='Arial',
         units='height', pos=(-0.4, -0.08), draggable=False, height=0.04, wrapWidth=None, ori=0.0, 
-        color='white', colorSpace='rgb', opacity=None, 
+        color='black', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-1.0);
     stim_image_1 = visual.ImageStim(
         win=win,
         name='stim_image_1', units='height', 
         image='default.png', mask=None, anchor='center',
-        ori=0.0, pos=(-0.4, -0.25), draggable=False, size=(0.20,0.25),
+        ori=0.0, pos=(-0.4, -0.25), draggable=False, size=(0.17, 0.25),
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-2.0)
@@ -560,14 +562,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         text='2',
         font='Arial',
         units='height', pos=(-0.13, -0.08), draggable=False, height=0.04, wrapWidth=None, ori=0.0, 
-        color='white', colorSpace='rgb', opacity=None, 
+        color='black', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-3.0);
     stim_image_2 = visual.ImageStim(
         win=win,
         name='stim_image_2', units='height', 
         image='default.png', mask=None, anchor='center',
-        ori=0.0, pos=(-0.13, -0.25), draggable=False, size=(0.2,0.25),
+        ori=0.0, pos=(-0.13, -0.25), draggable=False, size=(0.17, 0.25),
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-4.0)
@@ -575,14 +577,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         text='3',
         font='Arial',
         units='height', pos=(0.13, -0.08), draggable=False, height=0.04, wrapWidth=None, ori=0.0, 
-        color='white', colorSpace='rgb', opacity=None, 
+        color='black', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-5.0);
     stim_image_3 = visual.ImageStim(
         win=win,
         name='stim_image_3', units='height', 
         image='default.png', mask=None, anchor='center',
-        ori=0.0, pos=(0.13, -0.25), draggable=False, size=(0.2,0.25),
+        ori=0.0, pos=(0.13, -0.25), draggable=False, size=(0.17, 0.25),
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-6.0)
@@ -590,14 +592,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         text='4',
         font='Arial',
         units='height', pos=(0.4, -0.08), draggable=False, height=0.04, wrapWidth=None, ori=0.0, 
-        color='white', colorSpace='rgb', opacity=None, 
+        color='black', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-7.0);
     stim_image_4 = visual.ImageStim(
         win=win,
         name='stim_image_4', units='height', 
         image='default.png', mask=None, anchor='center',
-        ori=0.0, pos=(0.4, -0.25), draggable=False, size=(0.2,0.25),
+        ori=0.0, pos=(0.4, -0.25), draggable=False, size=(0.17, 0.25),
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-8.0)
@@ -608,8 +610,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     targetID_Teste = visual.TextStim(win=win, name='targetID_Teste',
         text='',
         font='Arial',
-        units='height', pos=(-0.4, 0.4), draggable=False, height=0.03, wrapWidth=None, ori=0.0, 
-        color='white', colorSpace='rgb', opacity=None, 
+        units='height', pos=(-0.48, 0.45), draggable=False, height=0.03, wrapWidth=None, ori=0.0, 
+        color='black', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-12.0);
     
@@ -620,20 +622,112 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         text='BLOCO 2',
         font='Arial',
         pos=(0, 1), draggable=False, height=1.0, wrapWidth=None, ori=0.0, 
-        color='white', colorSpace='rgb', opacity=None, 
+        color='black', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=0.0);
     text_response_2 = visual.TextStim(win=win, name='text_response_2',
         text='Pressione a BARRA DE ESPAÇO ou o BOTÃO ESQUERDO DO MOUSE para continuar.',
         font='Arial',
         pos=(0, -2), draggable=False, height=0.5, wrapWidth=None, ori=0.0, 
-        color='white', colorSpace='rgb', opacity=None, 
+        color='black', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-1.0);
     key_resp_2 = keyboard.Keyboard(deviceName='key_resp_2')
     mouse_resp_2 = event.Mouse(win=win)
     x, y = [None, None]
     mouse_resp_2.mouseClock = core.Clock()
+    
+    # --- Initialize components for Routine "trialFaceRecognition" ---
+    trial_video = visual.MovieStim(
+        win, name='trial_video',
+        filename=None, movieLib='ffpyplayer',
+        loop=True, volume=1.0, noAudio=False,
+        pos=(0, 0.20), size=[0.5, 0.4], units='height',
+        ori=0.0, anchor='center',opacity=None, contrast=1.0,
+        depth=0
+    )
+    text_1 = visual.TextStim(win=win, name='text_1',
+        text='1',
+        font='Arial',
+        units='height', pos=(-0.4, -0.08), draggable=False, height=0.04, wrapWidth=None, ori=0.0, 
+        color='black', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-1.0);
+    stim_image_1 = visual.ImageStim(
+        win=win,
+        name='stim_image_1', units='height', 
+        image='default.png', mask=None, anchor='center',
+        ori=0.0, pos=(-0.4, -0.25), draggable=False, size=(0.17, 0.25),
+        color=[1,1,1], colorSpace='rgb', opacity=None,
+        flipHoriz=False, flipVert=False,
+        texRes=128.0, interpolate=True, depth=-2.0)
+    text_2 = visual.TextStim(win=win, name='text_2',
+        text='2',
+        font='Arial',
+        units='height', pos=(-0.13, -0.08), draggable=False, height=0.04, wrapWidth=None, ori=0.0, 
+        color='black', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-3.0);
+    stim_image_2 = visual.ImageStim(
+        win=win,
+        name='stim_image_2', units='height', 
+        image='default.png', mask=None, anchor='center',
+        ori=0.0, pos=(-0.13, -0.25), draggable=False, size=(0.17, 0.25),
+        color=[1,1,1], colorSpace='rgb', opacity=None,
+        flipHoriz=False, flipVert=False,
+        texRes=128.0, interpolate=True, depth=-4.0)
+    text_3 = visual.TextStim(win=win, name='text_3',
+        text='3',
+        font='Arial',
+        units='height', pos=(0.13, -0.08), draggable=False, height=0.04, wrapWidth=None, ori=0.0, 
+        color='black', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-5.0);
+    stim_image_3 = visual.ImageStim(
+        win=win,
+        name='stim_image_3', units='height', 
+        image='default.png', mask=None, anchor='center',
+        ori=0.0, pos=(0.13, -0.25), draggable=False, size=(0.17, 0.25),
+        color=[1,1,1], colorSpace='rgb', opacity=None,
+        flipHoriz=False, flipVert=False,
+        texRes=128.0, interpolate=True, depth=-6.0)
+    text_4 = visual.TextStim(win=win, name='text_4',
+        text='4',
+        font='Arial',
+        units='height', pos=(0.4, -0.08), draggable=False, height=0.04, wrapWidth=None, ori=0.0, 
+        color='black', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-7.0);
+    stim_image_4 = visual.ImageStim(
+        win=win,
+        name='stim_image_4', units='height', 
+        image='default.png', mask=None, anchor='center',
+        ori=0.0, pos=(0.4, -0.25), draggable=False, size=(0.17, 0.25),
+        color=[1,1,1], colorSpace='rgb', opacity=None,
+        flipHoriz=False, flipVert=False,
+        texRes=128.0, interpolate=True, depth=-8.0)
+    key_response_trial = keyboard.Keyboard(deviceName='key_response_trial')
+    mouse_response_trial = event.Mouse(win=win)
+    x, y = [None, None]
+    mouse_response_trial.mouseClock = core.Clock()
+    targetID_Teste = visual.TextStim(win=win, name='targetID_Teste',
+        text='',
+        font='Arial',
+        units='height', pos=(-0.48, 0.45), draggable=False, height=0.03, wrapWidth=None, ori=0.0, 
+        color='black', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-12.0);
+    
+    # --- Initialize components for Routine "pause" ---
+    
+    # --- Initialize components for Routine "finalRoutine" ---
+    text = visual.TextStim(win=win, name='text',
+        text='Agradecemos por participar!',
+        font='Arial',
+        units='norm', pos=(0, 0), draggable=False, height=0.09, wrapWidth=None, ori=0.0, 
+        color='black', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=0.0);
     
     # create some handy timers
     
@@ -1280,7 +1374,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     block1Intro.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
     block1Intro.tStart = globalClock.getTime(format='float')
     block1Intro.status = STARTED
-    thisExp.addData('block1Intro.started', block1Intro.tStart)
     block1Intro.maxDuration = None
     # keep track of which components have finished
     block1IntroComponents = block1Intro.components
@@ -1425,7 +1518,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # store stop times for block1Intro
     block1Intro.tStop = globalClock.getTime(format='float')
     block1Intro.tStopRefresh = tThisFlipGlobal
-    thisExp.addData('block1Intro.stopped', block1Intro.tStop)
     # store data for thisExp (ExperimentHandler)
     thisExp.nextEntry()
     # the Routine "block1Intro" was not non-slip safe, so reset the non-slip timer
@@ -1435,10 +1527,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     block1Trials = data.TrialHandler2(
         name='block1Trials',
         nReps=1.0, 
-        method='random', 
+        method='sequential', 
         extraInfo=expInfo, 
         originPath=-1, 
-        trialList=data.importConditions('C:/Users/Manda/Documents/Faculdade/TCC - TRiFBr/TRiFBr - PsychoPy/conditions/conditions-B1.csv'), 
+        trialList=data.importConditions('../conditions/conditions-B1.csv'), 
         seed=None, 
     )
     thisExp.addLoop(block1Trials)  # add the loop to the experiment
@@ -1895,7 +1987,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # SALVAR APENAS AS COLUNAS ESSENCIAIS NO ARQUIVO FINAL
         thisExp.addData('ANALYSIS_Lamina_ID', (identificator))
         thisExp.addData('ANALYSIS_CR', is_correct)
-        thisExp.addData('ANALYSIS_RT', rt_value)
+        thisExp.addData('ANALYSIS_RT', (round(rt_value,3)))
         thisExp.addData('ANALYSIS_Response_Method', response_method)
         thisExp.addData('ANALYSIS_Selected_Option', selected_option)
         thisExp.addData('ANALYSIS_Target_Component', correct_response_name)
@@ -1915,7 +2007,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         pause.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
         pause.tStart = globalClock.getTime(format='float')
         pause.status = STARTED
-        pause.maxDuration = 0.5
+        pause.maxDuration = 1
         # skip Routine pause if its 'Skip if' condition is True
         pause.skipped = continueRoutine and not (block1Trials.thisTrialN == (block1Trials.nTotal - 1))
         continueRoutine = pause.skipped
@@ -1935,7 +2027,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         
         # --- Run Routine "pause" ---
         pause.forceEnded = routineForceEnded = not continueRoutine
-        while continueRoutine and routineTimer.getTime() < 0.5:
+        while continueRoutine and routineTimer.getTime() < 1.0:
             # if trial has changed, end Routine now
             if hasattr(thisBlock1Trial, 'status') and thisBlock1Trial.status == STOPPING:
                 continueRoutine = False
@@ -1994,7 +2086,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         elif pause.forceEnded:
             routineTimer.reset()
         else:
-            routineTimer.addTime(-0.500000)
+            routineTimer.addTime(-1.000000)
         # mark thisBlock1Trial as finished
         if hasattr(thisBlock1Trial, 'status'):
             thisBlock1Trial.status = FINISHED
@@ -2036,7 +2128,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     block2Intro.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
     block2Intro.tStart = globalClock.getTime(format='float')
     block2Intro.status = STARTED
-    thisExp.addData('block2Intro.started', block2Intro.tStart)
     block2Intro.maxDuration = None
     # keep track of which components have finished
     block2IntroComponents = block2Intro.components
@@ -2181,10 +2272,697 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # store stop times for block2Intro
     block2Intro.tStop = globalClock.getTime(format='float')
     block2Intro.tStopRefresh = tThisFlipGlobal
-    thisExp.addData('block2Intro.stopped', block2Intro.tStop)
     # store data for thisExp (ExperimentHandler)
     thisExp.nextEntry()
     # the Routine "block2Intro" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset()
+    
+    # set up handler to look after randomisation of conditions etc
+    block2Trials = data.TrialHandler2(
+        name='block2Trials',
+        nReps=1.0, 
+        method='random', 
+        extraInfo=expInfo, 
+        originPath=-1, 
+        trialList=data.importConditions('../conditions/conditions-B2.csv'), 
+        seed=None, 
+    )
+    thisExp.addLoop(block2Trials)  # add the loop to the experiment
+    thisBlock2Trial = block2Trials.trialList[0]  # so we can initialise stimuli with some values
+    # abbreviate parameter names if possible (e.g. rgb = thisBlock2Trial.rgb)
+    if thisBlock2Trial != None:
+        for paramName in thisBlock2Trial:
+            globals()[paramName] = thisBlock2Trial[paramName]
+    if thisSession is not None:
+        # if running in a Session with a Liaison client, send data up to now
+        thisSession.sendExperimentData()
+    
+    for thisBlock2Trial in block2Trials:
+        block2Trials.status = STARTED
+        if hasattr(thisBlock2Trial, 'status'):
+            thisBlock2Trial.status = STARTED
+        currentLoop = block2Trials
+        thisExp.timestampOnFlip(win, 'thisRow.t', format=globalClock.format)
+        if thisSession is not None:
+            # if running in a Session with a Liaison client, send data up to now
+            thisSession.sendExperimentData()
+        # abbreviate parameter names if possible (e.g. rgb = thisBlock2Trial.rgb)
+        if thisBlock2Trial != None:
+            for paramName in thisBlock2Trial:
+                globals()[paramName] = thisBlock2Trial[paramName]
+        
+        # --- Prepare to start Routine "trialFaceRecognition" ---
+        # create an object to store info about Routine trialFaceRecognition
+        trialFaceRecognition = data.Routine(
+            name='trialFaceRecognition',
+            components=[trial_video, text_1, stim_image_1, text_2, stim_image_2, text_3, stim_image_3, text_4, stim_image_4, key_response_trial, mouse_response_trial, targetID_Teste],
+        )
+        trialFaceRecognition.status = NOT_STARTED
+        continueRoutine = True
+        # update component parameters for each repeat
+        trial_video.setMovie(Target_Video)
+        stim_image_1.setImage(Image_1)
+        stim_image_2.setImage(Image_2)
+        stim_image_3.setImage(Image_3)
+        stim_image_4.setImage(Image_4)
+        # create starting attributes for key_response_trial
+        key_response_trial.keys = []
+        key_response_trial.rt = []
+        _key_response_trial_allKeys = []
+        # setup some python lists for storing info about the mouse_response_trial
+        mouse_response_trial.x = []
+        mouse_response_trial.y = []
+        mouse_response_trial.leftButton = []
+        mouse_response_trial.midButton = []
+        mouse_response_trial.rightButton = []
+        mouse_response_trial.time = []
+        mouse_response_trial.clicked_name = []
+        gotValidClick = False  # until a click is received
+        # Run 'Begin Routine' code from code
+        # Sets the ID Variable
+        identificator = Bloco+Lamina_ID
+        # Mapeia a posição numérica (lida do CSV) para o nome do componente visual
+        correct_pos = str(Target_Correto_Posicao) 
+        # Cria o nome do componente de imagem que é a resposta correta
+        correct_response_name = 'stim_image_' + correct_pos
+        
+        # Inicializa variáveis para este trial
+        is_correct = 0
+        rt_value = None
+        
+        targetID_Teste.setText(identificator)
+        # store start times for trialFaceRecognition
+        trialFaceRecognition.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+        trialFaceRecognition.tStart = globalClock.getTime(format='float')
+        trialFaceRecognition.status = STARTED
+        thisExp.addData('trialFaceRecognition.started', trialFaceRecognition.tStart)
+        trialFaceRecognition.maxDuration = None
+        # keep track of which components have finished
+        trialFaceRecognitionComponents = trialFaceRecognition.components
+        for thisComponent in trialFaceRecognition.components:
+            thisComponent.tStart = None
+            thisComponent.tStop = None
+            thisComponent.tStartRefresh = None
+            thisComponent.tStopRefresh = None
+            if hasattr(thisComponent, 'status'):
+                thisComponent.status = NOT_STARTED
+        # reset timers
+        t = 0
+        _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+        frameN = -1
+        
+        # --- Run Routine "trialFaceRecognition" ---
+        trialFaceRecognition.forceEnded = routineForceEnded = not continueRoutine
+        while continueRoutine:
+            # if trial has changed, end Routine now
+            if hasattr(thisBlock2Trial, 'status') and thisBlock2Trial.status == STOPPING:
+                continueRoutine = False
+            # get current time
+            t = routineTimer.getTime()
+            tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+            tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+            frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+            # update/draw components on each frame
+            
+            # *trial_video* updates
+            
+            # if trial_video is starting this frame...
+            if trial_video.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                trial_video.frameNStart = frameN  # exact frame index
+                trial_video.tStart = t  # local t and not account for scr refresh
+                trial_video.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(trial_video, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'trial_video.started')
+                # update status
+                trial_video.status = STARTED
+                trial_video.setAutoDraw(True)
+                trial_video.play()
+            
+            # if trial_video is stopping this frame...
+            if trial_video.status == STARTED:
+                if bool(False) or trial_video.isFinished:
+                    # keep track of stop time/frame for later
+                    trial_video.tStop = t  # not accounting for scr refresh
+                    trial_video.tStopRefresh = tThisFlipGlobal  # on global time
+                    trial_video.frameNStop = frameN  # exact frame index
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'trial_video.stopped')
+                    # update status
+                    trial_video.status = FINISHED
+                    trial_video.setAutoDraw(False)
+                    trial_video.stop()
+            
+            # *text_1* updates
+            
+            # if text_1 is starting this frame...
+            if text_1.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                text_1.frameNStart = frameN  # exact frame index
+                text_1.tStart = t  # local t and not account for scr refresh
+                text_1.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(text_1, 'tStartRefresh')  # time at next scr refresh
+                # update status
+                text_1.status = STARTED
+                text_1.setAutoDraw(True)
+            
+            # if text_1 is active this frame...
+            if text_1.status == STARTED:
+                # update params
+                pass
+            
+            # *stim_image_1* updates
+            
+            # if stim_image_1 is starting this frame...
+            if stim_image_1.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                stim_image_1.frameNStart = frameN  # exact frame index
+                stim_image_1.tStart = t  # local t and not account for scr refresh
+                stim_image_1.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(stim_image_1, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'stim_image_1.started')
+                # update status
+                stim_image_1.status = STARTED
+                stim_image_1.setAutoDraw(True)
+            
+            # if stim_image_1 is active this frame...
+            if stim_image_1.status == STARTED:
+                # update params
+                pass
+            
+            # *text_2* updates
+            
+            # if text_2 is starting this frame...
+            if text_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                text_2.frameNStart = frameN  # exact frame index
+                text_2.tStart = t  # local t and not account for scr refresh
+                text_2.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(text_2, 'tStartRefresh')  # time at next scr refresh
+                # update status
+                text_2.status = STARTED
+                text_2.setAutoDraw(True)
+            
+            # if text_2 is active this frame...
+            if text_2.status == STARTED:
+                # update params
+                pass
+            
+            # *stim_image_2* updates
+            
+            # if stim_image_2 is starting this frame...
+            if stim_image_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                stim_image_2.frameNStart = frameN  # exact frame index
+                stim_image_2.tStart = t  # local t and not account for scr refresh
+                stim_image_2.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(stim_image_2, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'stim_image_2.started')
+                # update status
+                stim_image_2.status = STARTED
+                stim_image_2.setAutoDraw(True)
+            
+            # if stim_image_2 is active this frame...
+            if stim_image_2.status == STARTED:
+                # update params
+                pass
+            
+            # *text_3* updates
+            
+            # if text_3 is starting this frame...
+            if text_3.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                text_3.frameNStart = frameN  # exact frame index
+                text_3.tStart = t  # local t and not account for scr refresh
+                text_3.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(text_3, 'tStartRefresh')  # time at next scr refresh
+                # update status
+                text_3.status = STARTED
+                text_3.setAutoDraw(True)
+            
+            # if text_3 is active this frame...
+            if text_3.status == STARTED:
+                # update params
+                pass
+            
+            # *stim_image_3* updates
+            
+            # if stim_image_3 is starting this frame...
+            if stim_image_3.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                stim_image_3.frameNStart = frameN  # exact frame index
+                stim_image_3.tStart = t  # local t and not account for scr refresh
+                stim_image_3.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(stim_image_3, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'stim_image_3.started')
+                # update status
+                stim_image_3.status = STARTED
+                stim_image_3.setAutoDraw(True)
+            
+            # if stim_image_3 is active this frame...
+            if stim_image_3.status == STARTED:
+                # update params
+                pass
+            
+            # *text_4* updates
+            
+            # if text_4 is starting this frame...
+            if text_4.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                text_4.frameNStart = frameN  # exact frame index
+                text_4.tStart = t  # local t and not account for scr refresh
+                text_4.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(text_4, 'tStartRefresh')  # time at next scr refresh
+                # update status
+                text_4.status = STARTED
+                text_4.setAutoDraw(True)
+            
+            # if text_4 is active this frame...
+            if text_4.status == STARTED:
+                # update params
+                pass
+            
+            # *stim_image_4* updates
+            
+            # if stim_image_4 is starting this frame...
+            if stim_image_4.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                stim_image_4.frameNStart = frameN  # exact frame index
+                stim_image_4.tStart = t  # local t and not account for scr refresh
+                stim_image_4.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(stim_image_4, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'stim_image_4.started')
+                # update status
+                stim_image_4.status = STARTED
+                stim_image_4.setAutoDraw(True)
+            
+            # if stim_image_4 is active this frame...
+            if stim_image_4.status == STARTED:
+                # update params
+                pass
+            
+            # *key_response_trial* updates
+            
+            # if key_response_trial is starting this frame...
+            if key_response_trial.status == NOT_STARTED and t >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                key_response_trial.frameNStart = frameN  # exact frame index
+                key_response_trial.tStart = t  # local t and not account for scr refresh
+                key_response_trial.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(key_response_trial, 'tStartRefresh')  # time at next scr refresh
+                # update status
+                key_response_trial.status = STARTED
+                # keyboard checking is just starting
+                key_response_trial.clock.reset()  # now t=0
+            if key_response_trial.status == STARTED:
+                theseKeys = key_response_trial.getKeys(keyList=['1','2','3','4'], ignoreKeys=["escape"], waitRelease=False)
+                _key_response_trial_allKeys.extend(theseKeys)
+                if len(_key_response_trial_allKeys):
+                    key_response_trial.keys = _key_response_trial_allKeys[0].name  # just the first key pressed
+                    key_response_trial.rt = _key_response_trial_allKeys[0].rt
+                    key_response_trial.duration = _key_response_trial_allKeys[0].duration
+                    # a response ends the routine
+                    continueRoutine = False
+            # *mouse_response_trial* updates
+            
+            # if mouse_response_trial is starting this frame...
+            if mouse_response_trial.status == NOT_STARTED and frameN >= 0.0:
+                # keep track of start time/frame for later
+                mouse_response_trial.frameNStart = frameN  # exact frame index
+                mouse_response_trial.tStart = t  # local t and not account for scr refresh
+                mouse_response_trial.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(mouse_response_trial, 'tStartRefresh')  # time at next scr refresh
+                # update status
+                mouse_response_trial.status = STARTED
+                mouse_response_trial.mouseClock.reset()
+                prevButtonState = mouse_response_trial.getPressed()  # if button is down already this ISN'T a new click
+            if mouse_response_trial.status == STARTED:  # only update if started and not finished!
+                buttons = mouse_response_trial.getPressed()
+                if buttons != prevButtonState:  # button state changed?
+                    prevButtonState = buttons
+                    if sum(buttons) > 0:  # state changed to a new click
+                        # check if the mouse was inside our 'clickable' objects
+                        gotValidClick = False
+                        clickableList = environmenttools.getFromNames([stim_image_1,stim_image_2,stim_image_3,stim_image_4], namespace=locals())
+                        for obj in clickableList:
+                            # is this object clicked on?
+                            if obj.contains(mouse_response_trial):
+                                gotValidClick = True
+                                mouse_response_trial.clicked_name.append(obj.name)
+                        if not gotValidClick:
+                            mouse_response_trial.clicked_name.append(None)
+                        x, y = mouse_response_trial.getPos()
+                        mouse_response_trial.x.append(x)
+                        mouse_response_trial.y.append(y)
+                        buttons = mouse_response_trial.getPressed()
+                        mouse_response_trial.leftButton.append(buttons[0])
+                        mouse_response_trial.midButton.append(buttons[1])
+                        mouse_response_trial.rightButton.append(buttons[2])
+                        mouse_response_trial.time.append(mouse_response_trial.mouseClock.getTime())
+                        if gotValidClick:
+                            continueRoutine = False  # end routine on response
+            
+            # *targetID_Teste* updates
+            
+            # if targetID_Teste is starting this frame...
+            if targetID_Teste.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                targetID_Teste.frameNStart = frameN  # exact frame index
+                targetID_Teste.tStart = t  # local t and not account for scr refresh
+                targetID_Teste.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(targetID_Teste, 'tStartRefresh')  # time at next scr refresh
+                # update status
+                targetID_Teste.status = STARTED
+                targetID_Teste.setAutoDraw(True)
+            
+            # if targetID_Teste is active this frame...
+            if targetID_Teste.status == STARTED:
+                # update params
+                pass
+            
+            # check for quit (typically the Esc key)
+            if defaultKeyboard.getKeys(keyList=["escape"]):
+                thisExp.status = FINISHED
+            if thisExp.status == FINISHED or endExpNow:
+                endExperiment(thisExp, win=win)
+                return
+            # pause experiment here if requested
+            if thisExp.status == PAUSED:
+                pauseExperiment(
+                    thisExp=thisExp, 
+                    win=win, 
+                    timers=[routineTimer, globalClock], 
+                    currentRoutine=trialFaceRecognition,
+                )
+                # skip the frame we paused on
+                continue
+            
+            # check if all components have finished
+            if not continueRoutine:  # a component has requested a forced-end of Routine
+                trialFaceRecognition.forceEnded = routineForceEnded = True
+                break
+            continueRoutine = False  # will revert to True if at least one component still running
+            for thisComponent in trialFaceRecognition.components:
+                if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                    continueRoutine = True
+                    break  # at least one component has not yet finished
+            
+            # refresh the screen
+            if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                win.flip()
+        
+        # --- Ending Routine "trialFaceRecognition" ---
+        for thisComponent in trialFaceRecognition.components:
+            if hasattr(thisComponent, "setAutoDraw"):
+                thisComponent.setAutoDraw(False)
+        # store stop times for trialFaceRecognition
+        trialFaceRecognition.tStop = globalClock.getTime(format='float')
+        trialFaceRecognition.tStopRefresh = tThisFlipGlobal
+        thisExp.addData('trialFaceRecognition.stopped', trialFaceRecognition.tStop)
+        trial_video.stop()  # ensure movie has stopped at end of Routine
+        # check responses
+        if key_response_trial.keys in ['', [], None]:  # No response was made
+            key_response_trial.keys = None
+        block2Trials.addData('key_response_trial.keys',key_response_trial.keys)
+        if key_response_trial.keys != None:  # we had a response
+            block2Trials.addData('key_response_trial.rt', key_response_trial.rt)
+            block2Trials.addData('key_response_trial.duration', key_response_trial.duration)
+        # store data for block2Trials (TrialHandler)
+        block2Trials.addData('mouse_response_trial.x', mouse_response_trial.x)
+        block2Trials.addData('mouse_response_trial.y', mouse_response_trial.y)
+        block2Trials.addData('mouse_response_trial.leftButton', mouse_response_trial.leftButton)
+        block2Trials.addData('mouse_response_trial.midButton', mouse_response_trial.midButton)
+        block2Trials.addData('mouse_response_trial.rightButton', mouse_response_trial.rightButton)
+        block2Trials.addData('mouse_response_trial.time', mouse_response_trial.time)
+        block2Trials.addData('mouse_response_trial.clicked_name', mouse_response_trial.clicked_name)
+        # Run 'End Routine' code from code
+        # Inicializar as variáveis de análise (default: miss/sem resposta)
+        response_method = 'miss'
+        selected_option = None
+        
+        #  Arbitragem de Resposta:
+        
+        # Checa se houve resposta pelo Teclado
+        if key_response_trial.keys is not None:
+            
+            response_method = 'keyboard'
+            rt_value = key_response_trial.rt
+            
+            # Pega o primeiro dígito pressionado
+            pressed_key = key_response_trial.keys[0] 
+            
+            # Checa o acerto
+            if str(pressed_key) == str(Target_Correto_Posicao):
+                is_correct = 1
+            
+            selected_option = pressed_key
+        
+        # Se não, checa se houve resposta pelo Mouse
+        elif mouse_response_trial.clicked_name:
+            
+            response_method = 'mouse'
+            
+            # O tempo do mouse está na lista de tempos registrada pelo componente
+            if mouse_response_trial.time is not None and len(mouse_response_trial.time) > 0:
+                rt_value = mouse_response_trial.time[0]
+            
+            # O nome do componente clicado está na lista
+            selected_option = mouse_response_trial.clicked_name[0] 
+            
+            # Checa o acerto
+            if selected_option == correct_response_name:
+                is_correct = 1
+        
+        # SALVAR APENAS AS COLUNAS ESSENCIAIS NO ARQUIVO FINAL
+        thisExp.addData('ANALYSIS_Lamina_ID', (identificator))
+        thisExp.addData('ANALYSIS_CR', is_correct)
+        thisExp.addData('ANALYSIS_RT', (round(rt_value,3)))
+        thisExp.addData('ANALYSIS_Response_Method', response_method)
+        thisExp.addData('ANALYSIS_Selected_Option', selected_option)
+        thisExp.addData('ANALYSIS_Target_Component', correct_response_name)
+        # the Routine "trialFaceRecognition" was not non-slip safe, so reset the non-slip timer
+        routineTimer.reset()
+        
+        # --- Prepare to start Routine "pause" ---
+        # create an object to store info about Routine pause
+        pause = data.Routine(
+            name='pause',
+            components=[],
+        )
+        pause.status = NOT_STARTED
+        continueRoutine = True
+        # update component parameters for each repeat
+        # store start times for pause
+        pause.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+        pause.tStart = globalClock.getTime(format='float')
+        pause.status = STARTED
+        pause.maxDuration = 1
+        # skip Routine pause if its 'Skip if' condition is True
+        pause.skipped = continueRoutine and not (block1Trials.thisTrialN == (block1Trials.nTotal - 1))
+        continueRoutine = pause.skipped
+        # keep track of which components have finished
+        pauseComponents = pause.components
+        for thisComponent in pause.components:
+            thisComponent.tStart = None
+            thisComponent.tStop = None
+            thisComponent.tStartRefresh = None
+            thisComponent.tStopRefresh = None
+            if hasattr(thisComponent, 'status'):
+                thisComponent.status = NOT_STARTED
+        # reset timers
+        t = 0
+        _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+        frameN = -1
+        
+        # --- Run Routine "pause" ---
+        pause.forceEnded = routineForceEnded = not continueRoutine
+        while continueRoutine and routineTimer.getTime() < 1.0:
+            # if trial has changed, end Routine now
+            if hasattr(thisBlock2Trial, 'status') and thisBlock2Trial.status == STOPPING:
+                continueRoutine = False
+            # get current time
+            t = routineTimer.getTime()
+            tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+            tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+            frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+            # update/draw components on each frame
+            # is it time to end the Routine? (based on local clock)
+            if tThisFlip > pause.maxDuration-frameTolerance:
+                pause.maxDurationReached = True
+                continueRoutine = False
+            
+            # check for quit (typically the Esc key)
+            if defaultKeyboard.getKeys(keyList=["escape"]):
+                thisExp.status = FINISHED
+            if thisExp.status == FINISHED or endExpNow:
+                endExperiment(thisExp, win=win)
+                return
+            # pause experiment here if requested
+            if thisExp.status == PAUSED:
+                pauseExperiment(
+                    thisExp=thisExp, 
+                    win=win, 
+                    timers=[routineTimer, globalClock], 
+                    currentRoutine=pause,
+                )
+                # skip the frame we paused on
+                continue
+            
+            # check if all components have finished
+            if not continueRoutine:  # a component has requested a forced-end of Routine
+                pause.forceEnded = routineForceEnded = True
+                break
+            continueRoutine = False  # will revert to True if at least one component still running
+            for thisComponent in pause.components:
+                if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                    continueRoutine = True
+                    break  # at least one component has not yet finished
+            
+            # refresh the screen
+            if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                win.flip()
+        
+        # --- Ending Routine "pause" ---
+        for thisComponent in pause.components:
+            if hasattr(thisComponent, "setAutoDraw"):
+                thisComponent.setAutoDraw(False)
+        # store stop times for pause
+        pause.tStop = globalClock.getTime(format='float')
+        pause.tStopRefresh = tThisFlipGlobal
+        # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
+        if pause.maxDurationReached:
+            routineTimer.addTime(-pause.maxDuration)
+        elif pause.forceEnded:
+            routineTimer.reset()
+        else:
+            routineTimer.addTime(-1.000000)
+        # mark thisBlock2Trial as finished
+        if hasattr(thisBlock2Trial, 'status'):
+            thisBlock2Trial.status = FINISHED
+        # if awaiting a pause, pause now
+        if block2Trials.status == PAUSED:
+            thisExp.status = PAUSED
+            pauseExperiment(
+                thisExp=thisExp, 
+                win=win, 
+                timers=[globalClock], 
+            )
+            # once done pausing, restore running status
+            block2Trials.status = STARTED
+        thisExp.nextEntry()
+        
+    # completed 1.0 repeats of 'block2Trials'
+    block2Trials.status = FINISHED
+    
+    if thisSession is not None:
+        # if running in a Session with a Liaison client, send data up to now
+        thisSession.sendExperimentData()
+    
+    # --- Prepare to start Routine "finalRoutine" ---
+    # create an object to store info about Routine finalRoutine
+    finalRoutine = data.Routine(
+        name='finalRoutine',
+        components=[text],
+    )
+    finalRoutine.status = NOT_STARTED
+    continueRoutine = True
+    # update component parameters for each repeat
+    # store start times for finalRoutine
+    finalRoutine.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+    finalRoutine.tStart = globalClock.getTime(format='float')
+    finalRoutine.status = STARTED
+    finalRoutine.maxDuration = 2
+    # keep track of which components have finished
+    finalRoutineComponents = finalRoutine.components
+    for thisComponent in finalRoutine.components:
+        thisComponent.tStart = None
+        thisComponent.tStop = None
+        thisComponent.tStartRefresh = None
+        thisComponent.tStopRefresh = None
+        if hasattr(thisComponent, 'status'):
+            thisComponent.status = NOT_STARTED
+    # reset timers
+    t = 0
+    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+    frameN = -1
+    
+    # --- Run Routine "finalRoutine" ---
+    finalRoutine.forceEnded = routineForceEnded = not continueRoutine
+    while continueRoutine:
+        # get current time
+        t = routineTimer.getTime()
+        tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+        # update/draw components on each frame
+        # is it time to end the Routine? (based on local clock)
+        if tThisFlip > finalRoutine.maxDuration-frameTolerance:
+            finalRoutine.maxDurationReached = True
+            continueRoutine = False
+        
+        # *text* updates
+        
+        # if text is starting this frame...
+        if text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            text.frameNStart = frameN  # exact frame index
+            text.tStart = t  # local t and not account for scr refresh
+            text.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(text, 'tStartRefresh')  # time at next scr refresh
+            # update status
+            text.status = STARTED
+            text.setAutoDraw(True)
+        
+        # if text is active this frame...
+        if text.status == STARTED:
+            # update params
+            pass
+        
+        # check for quit (typically the Esc key)
+        if defaultKeyboard.getKeys(keyList=["escape"]):
+            thisExp.status = FINISHED
+        if thisExp.status == FINISHED or endExpNow:
+            endExperiment(thisExp, win=win)
+            return
+        # pause experiment here if requested
+        if thisExp.status == PAUSED:
+            pauseExperiment(
+                thisExp=thisExp, 
+                win=win, 
+                timers=[routineTimer, globalClock], 
+                currentRoutine=finalRoutine,
+            )
+            # skip the frame we paused on
+            continue
+        
+        # check if all components have finished
+        if not continueRoutine:  # a component has requested a forced-end of Routine
+            finalRoutine.forceEnded = routineForceEnded = True
+            break
+        continueRoutine = False  # will revert to True if at least one component still running
+        for thisComponent in finalRoutine.components:
+            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                continueRoutine = True
+                break  # at least one component has not yet finished
+        
+        # refresh the screen
+        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+            win.flip()
+    
+    # --- Ending Routine "finalRoutine" ---
+    for thisComponent in finalRoutine.components:
+        if hasattr(thisComponent, "setAutoDraw"):
+            thisComponent.setAutoDraw(False)
+    # store stop times for finalRoutine
+    finalRoutine.tStop = globalClock.getTime(format='float')
+    finalRoutine.tStopRefresh = tThisFlipGlobal
+    thisExp.nextEntry()
+    # the Routine "finalRoutine" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
     # mark experiment as finished

@@ -1,3 +1,7 @@
-Bloco,Condicao,Lamina_ID,Target_Correto_Posicao,Target_Video,Image_1,Image_2,Image_3,Image_4
-BT1,CONTROLE,L1,1,../stimuli/video_teste.gif,../stimuli/imagem_teste.jpg,../stimuli/imagem_teste.jpg,../stimuli/imagem_teste.jpg,../stimuli/imagem_teste.jpg
-BT1,CONTROLE,L2,3,../stimuli/video_teste.gif,../stimuli/imagem_teste.jpg,../stimuli/imagem_teste.jpg,../stimuli/imagem_teste.jpg,../stimuli/imagem_teste.jpg
+Bloco;Condicao;Lamina_ID;Target_Correto_Posicao;Target_Video;Image_1;Image_2;Image_3;Image_4
+BT1;CONTROLE;L1;1;../stimuli/B1/L1/Video_Slide.gif;../stimuli/B1/L1/Picture1.png;../stimuli/B1/L1/Picture2.png;../stimuli/B1/L1/Picture3.png;../stimuli/B1/L1/Picture4.png
+BT1;CONTROLE;L2;3;../stimuli/B1/L2/Face Alvo B1L2.mp4;../stimuli/B1/L2/Picture1.png;../stimuli/B1/L2/Picture2.png;../stimuli/B1/L2/Picture3.png;../stimuli/B1/L2/Picture4.png
+BT1;CONTROLE;L3;3;../stimuli/B1/L2/Face Alvo B1L2.mp4;../stimuli/B1/L3/Picture1.png;../stimuli/B1/L3/Picture2.png;../stimuli/B1/L3/Picture3.png;../stimuli/B1/L3/Picture4.png
+BT1;CONTROLE;L4;3;../stimuli/B1/L2/Face Alvo B1L2.mp4;../stimuli/B1/L4/Picture1.png;../stimuli/B1/L4/Picture2.png;../stimuli/B1/L4/Picture3.png;../stimuli/B1/L4/Picture4.png
+BT1;CONTROLE;L5;3;../stimuli/B1/L2/Face Alvo B1L2.mp4;../stimuli/B1/L5/Picture1.png;../stimuli/B1/L5/Picture2.png;../stimuli/B1/L5/Picture3.png;../stimuli/B1/L5/Picture4.png
+BT1;CONTROLE;L6;3;../stimuli/B1/L2/Face Alvo B1L2.mp4;../stimuli/B1/L6/Picture1.png;../stimuli/B1/L6/Picture2.png;../stimuli/B1/L6/Picture3.png;../stimuli/B1/L6/Picture4.png
