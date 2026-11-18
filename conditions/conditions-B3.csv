@@ -1,0 +1,7 @@
+Bloco;Condicao;Lamina_ID;Target_Correto_Posicao;Target_Pasta_Frames;Image_1;Image_2;Image_3;Image_4
+BT3;SORRISO;L1;3;../stimuli/B3/L1/frames_Helena_Sorrindo_B3l1_8S_cropped;../stimuli/B3/L1/Laura.png;../stimuli/B3/L1/Nicole.png;../stimuli/B3/L1/Helena (alvo).png;../stimuli/B3/L1/M Gabriela.png
+BT3;SORRISO;L2;2;../stimuli/B3/L2/frames_Marina_B3l2_8S_cropped;../stimuli/B3/L2/Amanda.png;../stimuli/B3/L2/Marina (alvo).png;../stimuli/B3/L2/Lilian.png;../stimuli/B3/L2/Daiane.png
+BT3;SORRISO;L3;4;../stimuli/B3/L3/frames_Japa_B3l3_8S_cropped;../stimuli/B3/L3/Kaylane.png;../stimuli/B3/L3/Lyvia.png;../stimuli/B3/L3/Gabriela.png;../stimuli/B3/L3/Japa (alvo).png
+BT3;SORRISO;L4;2;../stimuli/B3/L4/frames_(Cropado)_Face_Alvo_Letras_Sorisso;../stimuli/B3/L4/Andrey.png;../stimuli/B3/L4/Letras (alvo).png;../stimuli/B3/L4/Arthur.png;../stimuli/B3/L4/Henrique.png
+BT3;SORRISO;L5;4;../stimuli/B3/L5/frames_Gabriel_sorrindo_B3L5_8s;../stimuli/B3/L5/Amigo de Will 3.png;../stimuli/B3/L5/Lucas D.png;../stimuli/B3/L5/Arthur.png;../stimuli/B3/L5/Gabriel (alvo).png
+BT3;SORRISO;L6;1;../stimuli/B3/L6/frames_Ykaro_Sorrindo_B3l6_8S_cropped;../stimuli/B3/L6/Ykaro (alvo).png;../stimuli/B3/L6/Preto.png;../stimuli/B3/L6/Ed Fisica.png;../stimuli/B3/L6/Andrey.png

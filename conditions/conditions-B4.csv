@@ -1,0 +1,7 @@
+Bloco;Condicao;Lamina_ID;Target_Correto_Posicao;Target_Pasta_Frames;Image_1;Image_2;Image_3;Image_4
+BT4;OCULOS_GRAU;L1;1;../stimuli/B4/L1/frames_Gabriela_B4l1_8S.Mp4_1_(Alvo)_Cropado;../stimuli/B4/L1/Gabriela (alvo).png;../stimuli/B4/L1/Lyvia.png;../stimuli/B4/L1/M Gabriela.png;../stimuli/B4/L1/Mariana.png
+BT4;OCULOS_GRAU;L2;3;../stimuli/B4/L2/frames_Laura_B4l2_8S_Cropado;../stimuli/B4/L2/Julia.png;../stimuli/B4/L2/Japa.png;../stimuli/B4/L2/Laura (alvo).png;../stimuli/B4/L2/Vitoria.png
+BT4;OCULOS_GRAU;L3;4;../stimuli/B4/L3/frames_Amanda_8S_Oculos_Grau_B4l3_Cropado;../stimuli/B4/L3/Laura.png;../stimuli/B4/L3/Marina.png;../stimuli/B4/L3/Helena.png;../stimuli/B4/L3/Amanda (alvo).png
+BT4;OCULOS_GRAU;L4;1;../stimuli/B4/L4/frames_Face_Alvo_B4l4_Cropado;../stimuli/B4/L4/Lucas (alvo).png;../stimuli/B4/L4/Henrique.png;../stimuli/B4/L4/Will.png;../stimuli/B4/L4/Vinicius.png
+BT4;OCULOS_GRAU;L5;2;../stimuli/B4/L5/frames_(Cropado)_Face_Alvo_Amigo_1_Oculos_de_Grau_(B4L5);../stimuli/B4/L5/Lucas D.png;../stimuli/B4/L5/Amigo 1 (alvo).png;../stimuli/B4/L5/Ykaro.png;../stimuli/B4/L5/Will.png
+BT4;OCULOS_GRAU;L6;3;../stimuli/B4/L6/frames_(Cropado)_Face_Alvo_Arthur_Oculos_de_Grau;../stimuli/B4/L6/Vinicius.png;../stimuli/B4/L6/Fabio.png;../stimuli/B4/L6/Arthur (alvo).png;../stimuli/B4/L6/Andrey.png

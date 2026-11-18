@@ -1,0 +1,7 @@
+Bloco;Condicao;Lamina_ID;Target_Correto_Posicao;Target_Pasta_Frames;Image_1;Image_2;Image_3;Image_4
+BT5;OCULOS_ESCUROS;L1;1;../stimuli/B5/L1/frames_Mariana_B5L1_8s_cropped;../stimuli/B5/L1/Mariana (alvo).png;../stimuli/B5/L1/Daiane.png;../stimuli/B5/L1/Kaylane.png;../stimuli/B5/L1/Lyvia.png
+BT5;OCULOS_ESCUROS;L2;3;../stimuli/B5/L2/frames_(Cropado)_Face_Alvo_Samara_Oculos_Escuros;../stimuli/B5/L2/Kaylane.png;../stimuli/B5/L2/Vitoria.png;../stimuli/B5/L2/Samara (alvo).png;../stimuli/B5/L2/Lilian.png
+BT5;OCULOS_ESCUROS;L3;2;../stimuli/B5/L3/frames_Face_Alvo_B5l3_cropped;../stimuli/B5/L3/Gabriela.png;../stimuli/B5/L3/Daiane (alvo).png;../stimuli/B5/L3/Julia.png;../stimuli/B5/L3/Nicole.png
+BT5;OCULOS_ESCUROS;L4;3;../stimuli/B5/L4/frames_(Cropadinho)_Henrique_Face_Alvo_Oculos_Escuros;../stimuli/B5/L4/Ed Fisica.png;../stimuli/B5/L4/Kayke.png;../stimuli/B5/L4/Henrique (alvo).png;../stimuli/B5/L4/Arthur.png
+BT5;OCULOS_ESCUROS;L5;1;../stimuli/B5/L5/frames_(Cropado)_Face_Alvo_Gabriel_Preto_Oculos_Escuros_(B5L5);../stimuli/B5/L5/Amigo de Will 3 (alvo).png;../stimuli/B5/L5/Letras.png;../stimuli/B5/L5/Ykaro.png;../stimuli/B5/L5/Amigo 1.png
+BT5;OCULOS_ESCUROS;L6;1;../stimuli/B5/L6/frames_(Cropado)_Face_Alvo_Fabio_Oculos_Escuros;../stimuli/B5/L6/Fabio (alvo).png;../stimuli/B5/L6/Mateus.png;../stimuli/B5/L6/Andrey.png;../stimuli/B5/L6/Lucas.png
