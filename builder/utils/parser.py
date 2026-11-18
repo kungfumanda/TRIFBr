@@ -5,26 +5,30 @@ import subprocess
 import time
 
 def processar_video_ffmpeg(caminho_video):
+    caminho_video = caminho_video.strip().strip('"').strip("'")
+    caminho_video = os.path.abspath(os.path.expanduser(caminho_video))
     if not os.path.exists(caminho_video):
-        print(f"\n❌ Erro: O arquivo '{caminho_video}' não existe nesta pasta.")
+        print(f"\n❌ Erro: o arquivo não foi encontrado neste caminho:\n{caminho_video}")
         return
 
     # Gera o nome da pasta automaticamente baseado no nome do vídeo (sem o .mp4)
     nome_base = os.path.splitext(os.path.basename(caminho_video))[0]
     nome_pasta_limpo = f"frames_{nome_base.replace(' ', '_')}"
+    pasta_video = os.path.dirname(os.path.abspath(caminho_video))
+    caminho_pasta_saida = os.path.join(pasta_video, nome_pasta_limpo)
     
     # Cria a pasta de destino se ela não existir
-    if not os.path.exists(nome_pasta_limpo):
-        os.makedirs(nome_pasta_limpo)
-        print(f"\n📁 Criando pasta: {nome_pasta_limpo}")
+    if not os.path.exists(caminho_pasta_saida):
+        os.makedirs(caminho_pasta_saida)
+        print(f"\n📁 Criando pasta: {caminho_pasta_saida}")
     else:
-        print(f"\n📁 Utilizando pasta existente: {nome_pasta_limpo}")
+        print(f"\n📁 Utilizando pasta existente: {caminho_pasta_saida}")
 
     print(f"🎬 Processando com FFmpeg: {os.path.basename(caminho_video)}")
     tempo_inicio = time.time()
 
     # O caminho de saída formatado para salvar as fotos (ex: frames_video/frame_0001.png)
-    padrao_saida = os.path.join(nome_pasta_limpo, "frame_%04d.png")
+    padrao_saida = os.path.join(caminho_pasta_saida, "frame_%04d.png")
 
     # Monta o comando do FFmpeg exatamente como você usaria no terminal do Windows
     # -y serve para sobrescrever arquivos antigos sem perguntar
@@ -42,12 +46,12 @@ def processar_video_ffmpeg(caminho_video):
         subprocess.run(comando, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=True)
         
         # Conta fisicamente quantos arquivos de imagem foram gerados na pasta
-        total_frames = len([f for f in os.listdir(nome_pasta_limpo) if f.endswith('.png')])
+        total_frames = len([f for f in os.listdir(caminho_pasta_saida) if f.endswith('.png')])
         tempo_total = time.time() - tempo_inicio
 
         print(f"✨ Concluído! {total_frames} frames gerados com sucesso em {tempo_total:.2f}s.")
         print(f"💡 Fórmula para usar no seu Image Component do PsychoPy Builder:")
-        print(f"   $'./{nome_pasta_limpo}/frame_%04d.png' % ((int(t * 30) % {total_frames}) + 1)")
+        print(f"   ${os.path.join(caminho_pasta_saida, 'frame_%04d.png')!r} % ((int(t * 30) % {total_frames}) + 1)")
         print("-" * 60)
 
     except FileNotFoundError:
