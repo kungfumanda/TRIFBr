@@ -1,3 +1,7 @@
-Bloco,Condicao,Lamina_ID,Target_Correto_Posicao,Target_Video,Image_1,Image_2,Image_3,Image_4
-BT2,OCULOS_ESCURO,L1,1,../stimuli/video_teste_1.gif,../stimuli/imagem_teste_3.jpg,../stimuli/imagem_teste_1.jpg,../stimuli/imagem_teste_4.jpg,../stimuli/imagem_teste_2.jpg
-BT2,OCULOS_ESCURO,L2,3,../stimuli/video_teste_2.gif,../stimuli/imagem_teste_1.jpg,../stimuli/imagem_teste_2.jpg,../stimuli/imagem_teste_3.jpg,../stimuli/imagem_teste_4.jpg
+Bloco,Condicao,Lamina_ID,Target_Correto_Posicao,Target_Pasta_Frames,Image_1,Image_2,Image_3,Image_4
+BT2,MAQUIAGEM,L1,2,../stimuli/B2/L1/frames_Marina_Maquiada_(B2l1)_8S_cropped,../stimuli/B2/L1/Gabriela.png,../stimuli/B2/L1/Marina (alvo).png,../stimuli/B2/L1/Amanda.png,../stimuli/B2/L1/Julia.png
+BT2,MAQUIAGEM,L2,1,../stimuli/B2/L2/frames_Vitoria_Maquiada_(B2l2)8S_cropped,../stimuli/B2/L2/Vitoria (alvo).png,../stimuli/B2/L2/Samara.png,../stimuli/B2/L2/Kaylane.png,../stimuli/B2/L2/Nicole.png
+BT2,MAQUIAGEM,L3,2,../stimuli/B2/L3/frames_Lilian_Make_8S_B2l3_cropped,../stimuli/B2/L3/Lyvia.png,../stimuli/B2/L3/Lilian (alvo).png,../stimuli/B2/L3/Marina.png,../stimuli/B2/L3/Daiane.png
+BT2,BARBA,L4,4,../stimuli/B2/L4/frames_Ed_Fisica_B2l4_8S_cropped,../stimuli/B2/L4/Lucas.png,../stimuli/B2/L4/Kayke.png,../stimuli/B2/L4/Mateus.png,../stimuli/B2/L4/Ed Fisica (alvo).png
+BT2,BARBA,L5,1,../stimuli/B2/L5/frames_Vinicius_B2l5_8S_cropped,../stimuli/B2/L5/Vinicius (alvo).png,../stimuli/B2/L5/Lucas D.png,../stimuli/B2/L5/Fabio.png,../stimuli/B2/L5/Gabriel.png
+BT2,BARBA,L6,1,../stimuli/B2/L6/frames_Face_Alvo_Preto_(Barba),../stimuli/B2/L6/Preto (alvo).png,../stimuli/B2/L6/Ykaro.png,../stimuli/B2/L6/Amigo 1.png,../stimuli/B2/L6/Letras.png

@@ -1,2 +1,2 @@
 Bloco;Condicao;Lamina_ID;Target_Correto_Posicao;Target_Pasta_Frames;Image_1;Image_2;Image_3;Image_4
-BT;INTRO;LT;2;../stimuli/BT/frames_Face_Alvo_Preto_(Barba);../stimuli/BT/Face Alternativa 1.png;../stimuli/BT/Face Alternativa 2.png;../stimuli/BT/Face Alternativa 3.png;../stimuli/BT/Face Alternativa 4.png
+BT;INTRO;LT;4;../stimuli/BT/frames_Face_Alvo_Teste;../stimuli/BT/Daiane.png;../stimuli/BT/Mariana.png;../stimuli/BT/Julia.png;../stimuli/BT/Aline (alvo).png

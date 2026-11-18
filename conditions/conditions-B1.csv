@@ -1,7 +1,7 @@
-Bloco;Condicao;Lamina_ID;Target_Correto_Posicao;Target_Video;Image_1;Image_2;Image_3;Image_4
-BT1;CONTROLE;L1;1;../stimuli/B1/L1/Video_Slide.gif;../stimuli/B1/L1/Picture1.png;../stimuli/B1/L1/Picture2.png;../stimuli/B1/L1/Picture3.png;../stimuli/B1/L1/Picture4.png
-BT1;CONTROLE;L2;3;../stimuli/B1/L2/Face Alvo B1L2.mp4;../stimuli/B1/L2/Picture1.png;../stimuli/B1/L2/Picture2.png;../stimuli/B1/L2/Picture3.png;../stimuli/B1/L2/Picture4.png
-BT1;CONTROLE;L3;3;../stimuli/B1/L2/Face Alvo B1L2.mp4;../stimuli/B1/L3/Picture1.png;../stimuli/B1/L3/Picture2.png;../stimuli/B1/L3/Picture3.png;../stimuli/B1/L3/Picture4.png
-BT1;CONTROLE;L4;3;../stimuli/B1/L2/Face Alvo B1L2.mp4;../stimuli/B1/L4/Picture1.png;../stimuli/B1/L4/Picture2.png;../stimuli/B1/L4/Picture3.png;../stimuli/B1/L4/Picture4.png
-BT1;CONTROLE;L5;3;../stimuli/B1/L2/Face Alvo B1L2.mp4;../stimuli/B1/L5/Picture1.png;../stimuli/B1/L5/Picture2.png;../stimuli/B1/L5/Picture3.png;../stimuli/B1/L5/Picture4.png
-BT1;CONTROLE;L6;3;../stimuli/B1/L2/Face Alvo B1L2.mp4;../stimuli/B1/L6/Picture1.png;../stimuli/B1/L6/Picture2.png;../stimuli/B1/L6/Picture3.png;../stimuli/B1/L6/Picture4.png
+Bloco;Condicao;Lamina_ID;Target_Correto_Posicao;Target_Pasta_Frames;Image_1;Image_2;Image_3;Image_4
+BT1;CONTROLE;L1;4;../stimuli/B1/L1/frames_Face_Alvo_B1L1_cropped;../stimuli/B1/L1/Gabriela.png;../stimuli/B1/L1/Mariana.png;../stimuli/B1/L1/Kaylane.png;../stimuli/B1/L1/Nicole (Alvo).png
+BT1;CONTROLE;L2;2;../stimuli/B1/L2/frames_Fce_Alvo_B1lL2_cropped;../stimuli/B1/L2/Lilian.png;../stimuli/B1/L2/M. Gabriela (alvo).png;../stimuli/B1/L2/Marina.png;../stimuli/B1/L2/Daiane.png
+BT1;CONTROLE;L3;1;../stimuli/B1/L3/frames_Julia_Neutra_8S_(B1l3)_cropped;../stimuli/B1/L3/Julia (alvo).png;../stimuli/B1/L3/Amanda.png;../stimuli/B1/L3/Laura.png;../stimuli/B1/L3/Lyvia.png
+BT1;CONTROLE;L4;2;../stimuli/B1/L4/frames_Andrey_Neutro_(B1l4)_cropped;../stimuli/B1/L4/Letras.png;../stimuli/B1/L4/Andrey (alvo).png;../stimuli/B1/L4/Amigo de Will 3.png;../stimuli/B1/L4/Fabio.png
+BT1;CONTROLE;L5;3;../stimuli/B1/L5/frames_Mateus_Neutro_(B1l5)_cropped;../stimuli/B1/L5/Henrique.png;../stimuli/B1/L5/Gabriel.png;../stimuli/B1/L5/Mateus (alvo).png;../stimuli/B1/L5/Lucas D.png
+BT1;CONTROLE;L6;2;../stimuli/B1/L6/frames_(Cropado)_Face_Alvo_Will_Neutro;../stimuli/B1/L6/Ed Fisica.png;../stimuli/B1/L6/Will (alvo).png;../stimuli/B1/L6/Preto.png;../stimuli/B1/L6/Kayke.png
