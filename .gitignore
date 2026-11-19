@@ -1,8 +1,6 @@
 # Ignore DATA completely for now
 data/
 
-#Ignore other conditions for now
-conditions-B3.csv
-conditions-B4.csv
-conditions-B5.csv
-conditions-B6.csv
+#Ignore videos
+*.mp4
+*.gif
